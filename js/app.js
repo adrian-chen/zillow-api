@@ -1,9 +1,9 @@
-$( "#legislators" ).on( "click", function( event ) {
-    legislators.load()
+$( "#parks" ).on( "click", function( event ) {
+    parks.load()
 })
 
-$( "#districts" ).on( "click", function( event ) {
-    districts.load()
+$( "#other" ).on( "click", function( event ) {
+    other.load()
 })
 
 // TODO: add loaders for more features

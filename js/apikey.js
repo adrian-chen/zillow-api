@@ -1,2 +1,2 @@
 // api key
-var apikey = {apikey: '6273aad657ed46168d96d5ac941597b8'}
+var apikey = 'AIzaSyBA_u6y_ciPBbF0lyZsQZctI12gQr_jvKU'
