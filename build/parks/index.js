@@ -1,11 +1,11 @@
 var parks = {
 
-    searchByLocation: function(longitude, latitude) {
+    textAnalysis: function(text) {
 
-        $.get("https://maps.googleapis.com/maps/api/place/textsearch/json?query=parks&location=40.0028850,-105.2711510&radius=5000&key=" + apikey, function(data) {
+        $.get("http://access.alchemyapi.com/calls/text/TextGetTextSentiment?&apikey=" + apikey + "&outputMode=json&text="+text, function(data) {
 
             console.log(data)
-            if (data.results){
+            if (data){
 
                 $.get("/zillow-api/parks/list.jade", function(template) {
                     var html = jade.render(template, {
@@ -27,10 +27,6 @@ var parks = {
             var html = jade.render(template)
             $("#ui").html(html)
         })
-
-        // default search results
-        parks.searchByLocation('51.5033630','-0.1276250')
-
     }
 
 }
